@@ -1,0 +1,47 @@
+.dialog-content {
+  width: 400px;
+  padding-top: 1rem;
+}
+
+.terminal-content {
+}
+
+.content-text {
+  padding-bottom: 1.5rem;
+}
+
+.dialog {
+  width: 100%;
+}
+
+.xterm-screen {
+  width: 100% !important;
+}
+
+.xterm-text-layer {
+  width: 100% !important;
+}
+
+.header-dialog {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+.header-start {
+  width: 97%;
+  display: flex;
+}
+
+.max-icon {
+  right: 15px;
+}
+
+.form-elements {
+  width: 250px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
