@@ -1,0 +1,27 @@
+version: "3.7"
+
+services:
+        client:
+               build:
+                      context: .
+                      dockerfile: client/Dockerfile
+                      target: development
+               ports:
+                        - "3000:3000"
+               volumes:
+                      - ./client:/app
+        server :
+                build:
+                        context: .
+                        dockerfile: server/Dockerfile
+                        target: development
+                environment:
+                      - SSH_PORT=${SSH_PORT}
+                      - SSH_USER=${SSH_USER}
+                      - SSH_PASSWORD=${SSH_PASSWORD}
+                      - SSH_TYPE=${SSH_TYPE}
+                      - SSH_HOST=${SSH_HOST}
+                ports:
+                        - "2224:2224"
+                volumes:
+                      - ./server:/go/src/github.com/noreng-jg/bastion-machine/server

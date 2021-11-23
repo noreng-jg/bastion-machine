@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -o allexport
+
+[ -f .env.override ] && . ./.env.override
+
+set +o allexport
+
+docker-compose "$@"
